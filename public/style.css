@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap');
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+body {
+    line-height: 1.6;
+    color: #444;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f4f4f9;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 16px;
+}
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+/* Inputs and Buttons */
+input {
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color .3s ease;
+}
+input:focus {
+    border-color: #aaa;
+}
+button {
+    cursor: pointer;
+    padding: 12px 16px;
+    background: #0066cc;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background .3s ease, transform .2s ease;
+}
+button:hover {
+    background: #005bb5;
+    transform: translateY(-2px);
+}
+button:disabled {
+    cursor: not-allowed;
+    background: #cccccc;
+}
+
+/* Layout Styles */
+.chat {
+    display: flex;
+    height: 100vh;
+}
+.sidebar {
+    width: 250px;
+    background: #2d3e50;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.chat__main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    background: #fff;
+    border-left: 1px solid #ddd;
+}
+.chat__messages {
+    flex-grow: 1;
+    padding: 24px;
+    overflow-y: auto;
+    background: #e9edf5;
+}
+
+/* Message Styles */
+.message {
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.message__name {
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 8px;
+    color: #1d72b8; /* Same color as .room-title background */
+}
+.message__meta {
+    color: #888;
+    font-size: 12px;
+}
+.message a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+/* Message Composition Styles */
+.msg-box {
+    display: flex;
+    flex-shrink: 0;
+    padding: 16px;
+    border-top: 1px solid #ddd;
+    background: #f7f7fa;
+}
+.msg-box form {
+    display: flex;
+    flex-grow: 1;
+}
+.msg-box input {
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-right: 16px;
+    flex-grow: 1;
+    border-radius: 4px;
+}
+.msg-box button {
+    font-size: 14px;
+}
+
+/* Join Page Styles */
+.join-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #1b3959;
+}
+.join-form__box {
+    background: #fff;
+    padding: 32px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.join-form button {
+    width: 100%;
+}
+.join-form input {
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+/* Chat Sidebar Styles */
+.room-title {
+    font-weight: 700;
+    font-size: 24px;
+    background: #1d72b8;
+    color: #fff;
+    padding: 24px;
+    text-align: center;
+}
+.list-title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 8px;
+    padding: 16px 24px;
+    border-bottom: 1px solid #444;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.users {
+    list-style: none;
+    padding: 16px 24px;
+    font-size: 14px;
+    color: #ddd;
+}
+.users li {
+    padding: 8px 0;
+    border-bottom: 1px solid #444;
+}
